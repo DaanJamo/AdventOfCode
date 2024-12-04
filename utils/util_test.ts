@@ -1,18 +1,19 @@
 import { assertEquals } from "@std/assert";
-import { parseWords, parseNumbers, parseTextFileWords, parseTextFileNumbers } from "./parse.ts";
-import { sum, product } from "utils/array.ts";
+import { parseWords, parseNumbers, parseTextFileWords, parseTextFileNumbers } from "utils";
+import "utils"
 
 Deno.test({
   name: "Sum test",
   fn: () => {
-    assertEquals(sum([-6, 1, 2, 3]), 0);
+    console.log(Array.prototype.sum);
+    assertEquals([-6, 1, 2, 3].sum(), 0);
   }
 });
 
 Deno.test({
   name: "Product test",
   fn: () => {
-    assertEquals(product([-1, -1, 1, 2, 3]), 6);
+    assertEquals([-1, -1, 1, 2, 3].product(), 6);
   }
 });
 
@@ -56,6 +57,7 @@ Deno.test({
 Deno.test({
   name: "Number parsing test",
   fn: () => {
+    assertEquals(numbers_actual.lines().map((l: string) => l.numbers()), numbers_expected);
     assertEquals(parseNumbers(numbers_actual), numbers_expected);
   }
 });

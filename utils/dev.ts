@@ -1,4 +1,5 @@
 import { parseArgs } from "jsr:@std/cli/parse-args";
+import "utils"
 
 const date = new Date();
 const flags = parseArgs(Deno.args, {
@@ -32,6 +33,7 @@ console.log(
   `day ${flags.day}!`
 );
 
+// TODO: set up correct test output passing
 const command = new Deno.Command(Deno.execPath(), {
   args: ["test", "-A", "--watch", `${flags.year}/${day}`
   ],

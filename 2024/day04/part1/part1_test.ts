@@ -1,11 +1,10 @@
 import { assertEquals } from "@std/assert";
 import solve from "./part1.ts";
-import "utils"
 
 Deno.test({
-  name: "Distance test",
+  name: "part1 test",
   permissions: { read: true },
   fn: () => {
-    assertEquals(solve("./2024/day01/part1/testCase.txt", true), 11);
+    assertEquals(solve("./2024/day04/part1/testCase.txt", true), 11);
   }
 });

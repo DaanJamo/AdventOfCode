@@ -1,17 +1,11 @@
 // Parse a string and return an array of word arrays with the whitespace removed.
 export function parseWords(str: string): string[][] {
-  const lines = str.trim().split(/\r?\n/);
-  const words = lines.map((l: string) => l.trim().split(/\s+/));
-  return words;
+  return str.lines().map((l: string) => l.trim().split(/\s+/));
 }
 
 // Parse a string and return an array of number arrays.
 export function parseNumbers(str: string): number[][] {
-  const numbers = str.trim().split(/\r?\n/).map((line) => {
-    const matches = line.match(/\d+/g);
-    return matches ? matches.map(Number) : [];
-  });
-  return numbers;
+  return str.lines().map((l : string) => l.numbers());
 }
 
 // Parse a text file and return an array of word arrays with the whitespace removed.

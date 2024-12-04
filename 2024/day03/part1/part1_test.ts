@@ -1,5 +1,6 @@
 import { assertEquals } from "@std/assert";
 import solve from "./part1.ts";
+import "utils"
 
 Deno.test({
   name: "part1 test",

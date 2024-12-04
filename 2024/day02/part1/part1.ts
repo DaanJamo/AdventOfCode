@@ -1,4 +1,4 @@
-import { parseTextFileNumbers } from "utils/parse.ts";
+import { parseTextFileNumbers } from "utils";
 
 export default function solve(path: string, verbose: boolean = false): number {
   const reports = parseTextFileNumbers(path);

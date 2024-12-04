@@ -1,4 +1,5 @@
 import { parseArgs } from "jsr:@std/cli/parse-args";
+import "utils";
 
 const date = new Date();
 const flags = parseArgs(Deno.args, {
