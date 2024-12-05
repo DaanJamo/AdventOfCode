@@ -37,7 +37,7 @@ console.log(
 const command = new Deno.Command(Deno.execPath(), {
   args: ["test", "-A", "--watch", `${flags.year}/${day}`
   ],
-  stdin: "piped",
-  stdout: "piped",
+  stdin: "inherit",
+  stdout: "inherit",
   });
 command.spawn();
