@@ -2,15 +2,15 @@
   "tasks": {
     "solve": {
       "description": "deno task solve y=YEAR d=DAY p=PART --verbose --help",
-      "command": "deno run -A utils/solve.ts"
+      "command": "deno run -A utils/commands/solve.ts"
     },
     "init": {
       "description": "deno task init y=YEAR d=DAY p=NUM_PARTS",
-      "command": "deno run -A utils/init.ts"
+      "command": "deno run -A utils/commands/init.ts"
     },
     "dev": {
       "description": "deno task dev y=YEAR d=DAY",
-      "command": "deno run -A utils/dev.ts"
+      "command": "deno run -A utils/commands/dev.ts"
     } 
   },
   "imports": {

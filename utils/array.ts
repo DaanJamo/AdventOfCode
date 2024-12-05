@@ -1,5 +1,5 @@
 Array.prototype.sum = function (): number {
-  return this.reduce((acc, val) => acc + val);
+  return this.reduce((acc, val) => acc + val, 0);
 }
 
 Array.prototype.product = function (): number {

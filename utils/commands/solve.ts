@@ -42,7 +42,7 @@ const part = `part${flags.part}`;
 if (flags.verbose) console.log("Running", `AoC ${flags.year}`, day, part);
 
 const inputPath = `./${flags.year}/${day}/${part}/input.txt`;
-const { default: solve } = await import(`../${flags.year}/${day}/${part}/${part}.ts`);
+const { default: solve } = await import(`../../${flags.year}/${day}/${part}/${part}.ts`);
 
 const answer = await solve(inputPath, flags.verbose);
 console.log("Answer:", answer);
