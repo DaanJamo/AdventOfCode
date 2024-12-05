@@ -5,6 +5,6 @@ Deno.test({
   name: "part1 test",
   permissions: { read: true },
   fn: () => {
-    assertEquals(solve("./2024/day04/part1/testCase.txt", true), 11);
+    assertEquals(solve("./2024/day04/part1/testCase.txt", true), 18);
   }
 });

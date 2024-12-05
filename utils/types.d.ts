@@ -1,10 +1,10 @@
 interface Array<T> {
   sum(this: Array<number>): number;
   product(this: Array<number>): number;
-  dropAt(index: number): Array<T>;
-  dropProduct(): Array<Array<T>>;
-  transpose(this: Array<Array<T>>): Array<Array<T>>;
-  diagonals(this: Array<Array<T>>): Array<Array<T>>;
+  dropAt(index: number): T[];
+  dropProduct(): T[][];
+  transpose<T>(this: T[][]): T[][];
+  diagonals<T>(this: T[][]): T[][];
 }
 
 interface String {

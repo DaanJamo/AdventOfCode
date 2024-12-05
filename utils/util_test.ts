@@ -1,6 +1,6 @@
 import { assertEquals } from "@std/assert";
 import { parseWords, parseNumbers, parseTextFileWords, parseTextFileNumbers } from "utils";
-import "utils"
+import "utils";
 
 Deno.test({
   name: "Sum test",
@@ -16,6 +16,25 @@ Deno.test({
     assertEquals([-1, -1, 1, 2, 3].product(), 6);
   }
 });
+
+Deno.test({
+  name: "Transpose test",
+  fn: () => {
+    const matrix: number[][] = [[1, 2, 3], [4, 5, 6]];
+    const expected: number[][] = [[1, 4], [2, 5], [3, 6]];
+    assertEquals(matrix.transpose(), expected);
+    assertEquals(matrix.transpose().transpose(), matrix);
+  }
+})
+
+Deno.test({
+  name: "Diagonals test",
+  fn: () => {
+    const matrix: number[][] = [[1, 2], [3, 4]];
+    const expected: number[][] = [[1], [2, 3], [4]];
+    assertEquals(matrix.diagonals(), expected);
+  }
+})
 
 const words_actual = 
 `The quick brown fox
